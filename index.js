@@ -29,6 +29,7 @@ app.use(cors({
 app.use(express.json())
 app.use(UserRoute);
 app.use(ProductRoute);
-app.listen(process.env.APP_PORT,()=>{
+const PORT = process.env.PORT || process.env.APP_PORT
+app.listen(PORT,()=>{
     console.log("server up and running...")
 })
